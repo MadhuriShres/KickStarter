@@ -1,0 +1,32 @@
+<h3> Top Hits Projects</h3>
+
+<table border="1"> 
+		<thead> 
+			<th> 
+				Name of project
+			</th>
+			<th> 
+				Abstract
+			</th>
+			<th>Description</th>
+			<th>Budget</th>
+		</thead>
+			<% @projects.each do |project|%> 
+		<tbody>	
+			<td> 
+				<%= project.title%>
+			</td>
+			<td>
+				<%= project.abstract %>
+			</td>
+			<td> 
+				<%= project.description%>
+			</td>
+			<td>
+				<%= project.budget %>
+			</td>
+		</tbody>
+		<%end%>
+	</table>
+
+	<%= link_to 'Back', projects_path %>

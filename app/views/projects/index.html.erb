@@ -1,0 +1,35 @@
+
+<h1> The no. of project is <%= @count%> </h1><br>
+<h3><%= link_to 'Add New Project', new_project_path %> </h3>	<br>
+<h3><%= link_to 'View top Projects', top_hits_projects_path %></h3>
+<h3>
+	<table border="1"> 
+		<thead> 
+			<th> 
+				Name of project
+			</th>
+			<th> 
+				Abstract
+			</th>
+			<th>action</th>
+			<th></th>
+			<th></th>
+		</thead>
+			<% @projects.each do |project|%> 
+		<tbody>	
+			<td> 
+				<%= project.title%>
+			</td>
+			<td>
+				<%= project.abstract %>
+			</td>
+			<td><%= link_to 'Edit', edit_project_path(project.id) %></td>
+			<td><%= link_to 'Delete', project_path(project.id), method: 'delete' %></td>
+			<td><%= link_to ' View Detail', project_path(project.id)%></td>
+		</tbody>
+		<%end%>
+	</table>
+</h3>
+
+	 
+	 

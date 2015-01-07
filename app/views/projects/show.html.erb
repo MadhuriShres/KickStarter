@@ -1,0 +1,25 @@
+<table border="1"> 
+		<thead> 
+			<th> 
+				Name of project
+			</th>
+			<th> 
+				Abstract
+			</th>
+			<th>Description</th>
+			<th>Budget</th>
+		</thead>
+			
+		<tbody>	
+			<td> 
+				<%= @project.title%>
+			</td>
+			<td>
+				<%= @project.abstract %>
+			</td>
+			<td><%= @project.description %></td>
+			<td>$<%= @project.budget %></td>
+		</tbody>
+	</table>
+
+	 <%= link_to 'Back', projects_path %>
