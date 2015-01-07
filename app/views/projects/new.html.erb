@@ -1,0 +1,25 @@
+
+<h1>About your project</h1>
+<!-- <form action="">
+	<div>
+		<label>Title of the Project</label>
+		<input type="text" name="title"> <br>
+		<label>Description</label>
+		<input type="text" name="description"> <br>
+		<label>Budget</label>
+		<input type="text" name="budget">
+	</div>
+
+</form> -->
+
+<%= form_for @project do |f|%>
+	<%= f.label :name%><br>
+	<%= f.text_field :title%> <br>
+  <%= f.label :description%> <br>
+  <%= f.text_field :description%> <br>
+  <%= f.label :abstract%><br>
+  <%= f.text_field :abstract%> <br>
+  <%= f.label :budget%> <br>
+  <%= f.text_field :budget%> <br>
+  <%= f.submit 'Click'%>
+<%end%>
